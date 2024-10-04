@@ -18,6 +18,9 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <ModalContext>
+        {/* ErrorBoundary
+        에러가 발생했을 때, 에러 메시지를 보여줄 수 있습니다.
+        */}
         <ErrorBoundary fallbackUI={<FullScreenMessage type="error" />}>
         {/* Suspense란
         Suspense는 리액트에서 비동기 처리를 할 때 사용하는 컴포넌트입니다.
