@@ -4,5 +4,11 @@
         url("../assets/fonts/subset-NanumGeumEunBoHwa.woff2") format("woff2"), 
         url("../assets/fonts/subset-NanumGeumEunBoHwa.woff") format("woff"),
         url("../assets/fonts/subset-NanumGeumEunBoHwa.ttf") format("truetype");
-    font-display: fallback;    
+    font-display: fallback; // !!   
+
+    // - swap(FOUT): 폰트를 다운받기전에는 기본 폰트를 노출하고 다운로드 완료후 폰트를 교체
+    // - block(FOIT): 3초내에 폰트를 다운받지 못하면 기본 폰트를 노출한다.
+    // - fallback(FOIT): 0.1 초 정도 block 이 발생. 3초 이내로 다운받지 못한다면, 다운로드 여부와 상관없이 기본 폰트 노출 (캐시)
+    // - optional(FOIT): fallback 과 비슷하다. 폰트가 다운로드 받는 시간이 너무 오래걸리면 브라우저가 연결을 취소 할 수 있다. (캐시 
+
 }
