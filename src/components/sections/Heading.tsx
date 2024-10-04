@@ -6,6 +6,9 @@ import Section from '@shared/Section'
 
 const cx = classNames.bind(styles)
 
+/**
+ * 리렌더링에 영향을 받지 않는 상수 변수는 컴포넌트 밖에 선언합니다.
+ */
 const days = [
   'Sunday',
   'Monday',
