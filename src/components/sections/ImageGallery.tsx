@@ -13,6 +13,11 @@ const cx = classNames.bind(styles)
 function ImageGallery({ images }: { images: string[] }) {
   const [selectedIdx, setSelectedIdx] = useState(-1)
 
+  /** 
+   * selectedIdx가 변할 때 해당 컴포넌트는 리렌더링되므로,
+   * open값은 selectedIdx가 변할 때마다 변경됩니다.
+   * 그래서 useState를 사용해 open 변수를 선언치 않아도 됩니다.
+   * */ 
   const open = selectedIdx > -1
 
   const handleSelectedImage = (idx: number) => {
