@@ -36,10 +36,14 @@ export function ModalContext({ children }: { children: React.ReactNode }) {
     setModalState({ ...options, open: true })
   }, [])
 
+  // useCallback은 리렌더링시 함수가 새로 생성되는 것을 방지합니다.
+  // 함수를 캐싱해두고, 의존성이 변경되었을 때만 함수를 재생성합니다.
   const close = useCallback(() => {
     setModalState(defaultValues)
   }, [])
 
+  // useMemo는 리렌더링시 값을 새로 생성하는 것을 방지합니다.
+  // values는 open, close 함수가 변경될 때만 새로 생성됩니다.
   const values = useMemo(
     () => ({
       open,
