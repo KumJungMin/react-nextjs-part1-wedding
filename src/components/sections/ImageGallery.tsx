@@ -40,6 +40,11 @@ function ImageGallery({ images }: { images: string[] }) {
                 handleSelectedImage(idx)
               }}
             >
+              {/* 
+              webp를 사용하면 이미지 용량을 줄일 수 있습니다.
+              하지만 IE에서는 webp를 지원하지 않기에 jpg 파일도 함께 제공합니다.
+              
+              */}
               <picture>
                 <source
                   srcSet={generateImageUrl({
