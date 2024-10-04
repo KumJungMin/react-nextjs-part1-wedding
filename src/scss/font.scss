@@ -1,5 +1,8 @@
 @font-face {
     font-family: 'NanumGeumEunBoHwa';
+
+    // font는 woff2 < woff < ttf 순으로 선언하는 것이 좋다.
+    // woff2는 용량이 작지만, 호환성을 위해 woff, ttf도 같이 선언한다.
     src: 
         url("../assets/fonts/subset-NanumGeumEunBoHwa.woff2") format("woff2"), 
         url("../assets/fonts/subset-NanumGeumEunBoHwa.woff") format("woff"),
