@@ -19,6 +19,10 @@ root.render(
     <QueryClientProvider client={queryClient}>
       <ModalContext>
         <ErrorBoundary fallbackUI={<FullScreenMessage type="error" />}>
+        {/* Suspense란
+        Suspense는 리액트에서 비동기 처리를 할 때 사용하는 컴포넌트입니다.
+        로딩 중일 때 보여줄 UI를 설정할 수 있습니다.
+        */}
           <Suspense fallback={<FullScreenMessage type="loading" />}>
             <App />
           </Suspense>
