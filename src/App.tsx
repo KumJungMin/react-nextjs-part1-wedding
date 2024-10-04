@@ -18,7 +18,11 @@ import useWedding from './hooks/useWedding'
 const cx = classNames.bind(styles)
 
 function App() {
-  const { wedding } = useWedding()
+  // useWedding으로 API를 호출하고, 데이터를 가져옵니다.
+  // 관심사를 분리함으로서, 컴포넌트의 역할을 명확히 할 수 있습니다.
+  // 컴포넌트는 UI를 담당하고, 훅은 데이터를 가져오는 역할을 합니다.
+  // 데이터 로직은 분리됐기에 테스트하기도 쉽습니다.
+  const { wedding } = useWedding() // !!
 
   if (wedding == null) {
     return null
